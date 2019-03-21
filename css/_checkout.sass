@@ -1,0 +1,128 @@
+@import "vars"
+
+.check
+    margin-top: 56px
+    
+.check-flex
+    display: flex
+    flex-direction: column
+
+.check-param
+    border-top: 1px solid #e8e8e8
+    border-bottom: 1px solid #e8e8e8
+    border-collapse: collapse
+    &:first-of-type
+        border: none
+    
+.check-param-head
+    color: $dark_text
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
+    padding: 33px     
+    
+.check-flex-sides
+    display: flex
+    
+.check-left-side
+    width: 390px
+
+.check-param-p-dark
+    color: $dark_text
+    font-size: 13px
+    font-weight: 700
+    text-transform: uppercase
+    margin-bottom: 15px
+    margin-top: 33px
+    
+.check-param-lite
+    color: $lite_text
+    font-size: 13px
+    font-weight: 400
+    margin-bottom: 34px
+    
+.check-param-form
+    display: flex
+    flex-direction: column
+    
+.check-param-label
+    color: $dark_text
+    font-size: 12px
+    font-weight: 700
+    text-transform: uppercase
+    position: relative
+    padding-left: 28px
+    padding-bottom: 20px
+    
+    
+.check-param-input
+    display: none
+    &:checked + .radio:before
+        content: ''
+        position: absolute
+        width: 8px
+        height: 8px
+        top: 3px
+        left: 3px
+        background: #000000
+        border-radius: 8px
+    
+.radio
+    content: ""
+    position: absolute
+    width: 14px
+    height: 14px
+    border: 2px solid #555555
+    left: 0
+    top: -2px
+    border-radius: 9px
+
+.marker
+    margin-bottom: 15px
+    &:before
+        content: '>> '
+        @extend .check-param-lite
+    &:last-of-type
+        margin-bottom: 34px
+
+.check-right-side
+    .check-param-label
+        padding-left: 0
+        font-size: 13px
+        padding-bottom: 16px
+        
+.check-param-input-text
+    border: 1px solid #eaeaea
+    width: 390px
+    height: 45px
+    padding: 0 10px
+    margin-bottom: 22px
+    
+.red
+    color: #ff0d0d
+
+.check-param-login
+    display: flex
+    
+.check-param-button
+    display: flex
+    width: 180px
+    height: 53px
+    color: #4a4a4a
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+    text-decoration: none
+    justify-content: center
+    align-items: center
+    border: 1px solid #eaeaea
+    margin-bottom: 79px
+
+.check-param-forgot-link
+    text-decoration: none
+    text-align: right
+    color: $dark_text
+    font-size: 14px
+    font-weight: 400
+    margin-left: 32px
+    margin-top: 24px

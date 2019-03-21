@@ -1,0 +1,245 @@
+/*cart*/
+
+.cart
+  margin-top: 70px
+
+.cart-flex
+  display: flex
+  flex-direction: column
+  width: 100%
+
+.cart-header
+  display: flex
+  width: 100%
+  border-bottom: 1px solid #eaeaea
+
+.cart-headcol
+  flex-basis: 100px
+  flex-grow: 1
+  &:first-of-type
+    flex-basis: 100px
+    flex-grow: 3
+  &:first-of-type .cart-headcol-p
+    text-align: left
+  &:last-of-type
+    flex-basis: 100px
+    flex-grow: 0.3
+
+.cart-headcol-p
+  margin: 20px 0
+  color: $dark_text
+  font-size: 13px
+  font-weight: 700
+  text-transform: uppercase
+  text-align: center
+
+.cart-item
+  display: flex
+  width: 100%
+  border-bottom: 1px solid #eaeaea
+
+.cart-itemcol
+  flex-basis: 100px
+  flex-grow: 1
+  display: flex
+  align-items: center
+  justify-content: center
+  &:first-of-type
+    flex-basis: 100px
+    flex-grow: 3
+    justify-content: flex-start
+    align-items: flex-start
+  &:last-of-type
+    flex-basis: 100px
+    flex-grow: 0.3
+
+.cart-itemcol-img
+  margin: 22px 21px 25px 0
+
+.cart-itemcol-description
+  align-content: center
+  margin-top: 35px
+
+.cart-itemcol-link
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+
+.cart-itemcol-p
+  color: $dark_text
+  font-size: 13px
+  font-weight: 400
+  margin-bottom: 10px
+
+.cart-itemcol-p-self
+  text-transform: uppercase
+  font-weight: 700
+  margin-bottom: 38px
+
+.cart-itemcol-span
+  color: #6f6e6e
+  font-size: 13px
+  font-weight: 400
+
+.cart-itemcol-p-other
+  color: #656565
+  font-size: 13px
+  font-weight: 400
+  text-align: center
+
+.cart-itemcol-size
+  width: 54px
+  height: 30px
+  text-align: center
+  color: #656565
+  font-size: 13px
+  font-weight: 400
+
+.cart-itemcol-delete
+  transform: rotate(45deg)
+  color: #c0c0c0
+  font-size: 16px
+  font-weight: 400
+  text-transform: uppercase
+  &:hover
+    animation: color-change-2x 0.8s linear infinite alternate both
+
+.buttons-flex
+  display: flex
+  justify-content: space-between
+  width: 100%
+  margin-top: 44px
+
+.cart-clear-link
+  color: #4a4a4a
+  font-size: 14px
+  font-weight: 700
+  text-transform: uppercase
+  border: 1px solid #eaeaea
+  padding: 20px 39px
+  text-decoration: none
+  &:hover
+    @extend %shadow
+    animation: shadow-drop-br 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+
+.cart-continue-link
+  color: #4a4a4a
+  font-size: 14px
+  font-weight: 700
+  text-transform: uppercase
+  border: 1px solid #eaeaea
+  padding: 20px 39px
+  text-decoration: none
+  &:hover
+    @extend %shadow
+    animation: shadow-drop-br 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+.cart-forms
+  display: flex
+  flex-direction: column
+  margin-top: 63px
+
+.cart-form
+  width: 355px
+  margin-right: 35px
+
+.cart-form:last-of-type
+  margin-right: 0
+
+.cart-form-h
+  color: $dark_text
+  font-size: 16px
+  font-weight: 700
+  text-transform: uppercase
+  margin-bottom: 22px
+
+.cart-form-p
+  color: #000000
+  font-size: 14px
+  font-weight: 300
+  margin-bottom: 24px
+
+.cart-form-flex
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+
+.cart-form-textform
+  width: 355px
+  height: 45px
+  color: #b1b1b1
+  font-size: 13px
+  font-weight: 300
+  padding: 0 18px
+  margin-bottom: 20px
+  box-sizing: border-box
+  &:hover
+    @extend %shadow
+    animation: shadow-drop-br 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+.cart-form-buttonform
+  display: block
+  color: #4a4a4a
+  font-size: 11px
+  font-weight: 700
+  text-transform: uppercase
+  padding: 12px 18px
+  border: 1px solid #eaeaea
+  background-color: $white
+  width: max-content
+  text-decoration: none
+  margin-top: 5px
+  &:hover
+    @extend %shadow
+    animation: shadow-drop-br 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+.total-price
+  display: flex
+  flex-direction: column
+  width: 360px
+  height: 214px
+  background-color: #f5f3f3
+  text-align: right
+
+.cart-form-price
+  margin: 40px
+  margin-bottom: 17px
+  width: 275px
+  border-bottom: 1px solid #e2e2e2
+  border-collapse: collapse
+
+.cart-form-price-sub
+  color: #4a4a4a
+  font-size: 11px
+  font-weight: 400
+  text-transform: uppercase
+  padding-bottom: 14px
+
+.cart-form-price-grand
+  color: $dark_text
+  font-size: 16px
+  font-weight: 700
+  text-transform: uppercase
+  padding-bottom: 22px
+
+
+.price-color
+  color: $pink
+
+.checkout
+  color: $white
+  font-size: 16px
+  font-weight: 700
+  text-transform: uppercase
+  background-color: #f16d7f
+  padding: 19px 42px
+  margin: 0 auto
+  text-decoration: none
+  &:hover
+    @extend %shadow
+    animation: shadow-drop-br 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+.check-flex
+  display: flex
+  flex-direction: column

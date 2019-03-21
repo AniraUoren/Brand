@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "img": "img/item1.png",
+    "title": "Mango People T-shirt",
+    "price": "52",
+    "material": "cotton",
+    "designer": "BINBURHAN",
+    "color": ["Red", "White", "Blue"],
+    "size": ["S", "M", "XL", "XLL"],
+    "shipping": "free"
+  },
+  {
+    "id": 2,
+    "img": "img/item2.png",
+    "title": "Mango People T-shirt",
+    "price": "52",
+    "material": "cotton",
+    "designer": "BINBURHAN",
+    "color": ["Red", "White", "Blue"],
+    "size": ["S", "M", "XL", "XLL"],
+    "shipping": "free"
+  },
+  {
+    "id": 3,
+    "img": "img/item3.png",
+    "title": "Mango People T-shirt",
+    "price": "52",
+    "material": "cotton",
+    "designer": "BINBURHAN",
+    "color": ["Red", "White", "Blue"],
+    "size": ["S", "M", "XL", "XLL"],
+    "shipping": "free"
+  },
+  {
+    "id": 4,
+    "img": "img/item4.png",
+    "title": "Mango People T-shirt",
+    "price": "52",
+    "material": "cotton",
+    "designer": "BINBURHAN",
+    "color": ["Red", "White", "Blue"],
+    "size": ["S", "M", "XL", "XLL"],
+    "shipping": "free"
+  },
+  {
+    "id": 5,
+    "img": "img/item5.png",
+    "title": "Mango People T-shirt",
+    "price": "52",
+    "material": "cotton",
+    "designer": "BINBURHAN",
+    "color": ["Red", "White", "Blue"],
+    "size": ["S", "M", "XL", "XLL"],
+    "shipping": "free"
+  },
+  {
+    "id": 6,
+    "img": "img/item6.png",
+    "title": "Mango People T-shirt",
+    "price": "52",
+    "material": "cotton",
+    "designer": "BINBURHAN",
+    "color": ["Red", "White", "Blue"],
+    "size": ["S", "M", "XL", "XLL"],
+    "shipping": "free"
+  },
+  {
+    "id": 7,
+    "img": "img/item7.png",
+    "title": "Mango People T-shirt",
+    "price": "52",
+    "material": "cotton",
+    "designer": "BINBURHAN",
+    "color": ["Red", "White", "Blue"],
+    "size": ["S", "M", "XL", "XLL"],
+    "shipping": "free"
+  },
+  {
+    "id": 8,
+    "img": "img/item8.png",
+    "title": "Mango People T-shirt",
+    "price": "52",
+    "material": "cotton",
+    "designer": "BINBURHAN",
+    "color": ["Red", "White", "Blue"],
+    "size": ["S", "M", "XL", "XLL"],
+    "shipping": "free"
+  },
+  {
+    "id": 9,
+    "img": "img/item9.png",
+    "title": "Mango People T-shirt",
+    "price": "52",
+    "material": "cotton",
+    "designer": "BINBURHAN",
+    "color": ["Red", "White", "Blue"],
+    "size": ["S", "M", "XL", "XLL"],
+    "shipping": "free"
+  }
+]

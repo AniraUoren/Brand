@@ -1,0 +1,680 @@
+@import "vars"
+@import "keyframes"
+
+%shadow
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16)
+*
+    margin: 0
+    padding: 0
+
+body 
+    font-family: 'Lato', sans-serif
+
+
+/*header*/
+.header 
+    border-bottom: 1px solid #ececec
+    background-color: $white
+
+
+.container 
+    width: 1140px
+    margin: 0 auto
+    display: flex
+
+
+.header-flex 
+    height: 100px
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+
+.header-left 
+    display: flex
+    align-items: center
+
+
+.logo-link 
+    display: flex
+    align-items: center
+    margin-right: 37px
+    color: $dark_text
+    font-size: 27px
+    font-weight: 300
+    line-height: 32px
+    text-decoration: none
+    text-transform: uppercase
+
+.pink
+    color: $pink
+    font-weight: 700
+
+
+.btn-browse 
+    border-bottom-left-radius: 3px
+    border-top-left-radius: 3px
+    border-style: solid
+    border-width: 1px
+    border-color: $lite_gray_border
+    box-sizing: border-box
+    background: linear-gradient(180deg, #f9f9f9 0%, #f5f5f5 100%)
+    width: 87px
+    height: 38px
+    color: $dark_text
+    font-size: 14px
+    font-weight: 300
+    line-height: 32px
+    text-align: center
+    float: left
+
+
+.search-input 
+    width: 280px
+    height: 38px
+    border: 1px solid $lite_gray_border
+    border-left: none
+    box-sizing: border-box
+    background-color: $white
+    padding: 0 16px
+    &:focus
+        outline: none
+
+.search-submit 
+    width: 38px
+    height: 38px
+    border-bottom-right-radius: 3px
+    border-top-right-radius: 3px
+    border-style: solid
+    border-left: none
+    border-width: 1px
+    border-color: $lite_gray_border
+    box-sizing: border-box
+    background: $white url(../img/search.png) no-repeat 12px 11px
+    font-size: 0
+    float: right
+
+
+.header-right 
+    display: flex
+    align-items: center
+    position: relative
+
+
+.cart-img 
+    margin-right: 26px
+
+
+.btn-account 
+    background-color: $pink
+    width: 130px
+    height: 38px
+    color: $white
+    font-size: 15px
+    font-weight: 400
+    text-decoration: none
+    box-sizing: border-box
+    padding: 12px 19px
+    &:hover
+        @extend %shadow
+        animation: shadow-drop-br 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+        
+/*navigation*/
+
+.navigation 
+    background-color: $white
+    height: 51px
+
+
+.menu 
+    display: flex
+    list-style: none
+
+
+.menu-list 
+    position: relative
+
+
+.menu-link 
+    color: $dark_text
+    font-size: 14px
+    font-weight: 700
+    text-decoration: none
+    text-transform: uppercase
+    display: block
+    padding: 20px 15px
+    &:hover
+        color: $pink
+
+
+.bunner 
+    background-color: #e8e8e8
+    height: 613px
+
+
+/*main*/
+
+.bunner-img 
+    background: url(../img/banner.jpg) no-repeat 0 -51px
+    height: 100%
+
+.bunner-big-letters 
+    font-size: 60px
+    font-weight: 700
+    text-transform: uppercase
+    line-height: 44px
+
+
+.bunner-smal-letters 
+    line-height: 30px
+    font-size: 40px
+    font-weight: 400
+    text-transform: uppercase
+    margin-top: 20px
+
+
+.bunner-text 
+    border-left: 12px solid $pink
+    margin-top: 225px
+    padding-left: 12px
+    height: min-content
+
+
+.sell 
+    margin-top: 98px
+    height: 823px
+    flex-direction: column
+    justify-content: space-between
+    flex-wrap: wrap
+
+
+.sell-item1 
+    width: 560px
+    height: 542px
+    background-image: url(../img/sell_men.jpg)
+
+
+
+.sell-item-text 
+    color: $dark_text
+    font-size: 18px
+    font-weight: 700
+    text-transform: uppercase
+    background-color: $white
+    display: block
+    float: left
+    padding: 16px 19px
+    margin-top: 25px
+
+
+.sell-item2 
+    width: 560px
+    height: 261px
+    background-image: url(../img/sell_women.jpg)
+    align-self: flex-end
+
+
+.sell-item3 
+    width: 560px
+    height: 261px
+    background: #dadad2 url(../img/sell_accesories.jpg) no-repeat 149px 0
+
+
+
+
+.sell-item4 
+    width: 560px
+    height: 542px
+    background-image: url(../img/sell_kids.jpg)
+    align-self: flex-end
+
+
+.help 
+    display: block
+
+
+.fetured-block 
+    margin-top: 100px
+    flex-direction: column
+    justify-content: center
+
+
+.fetured-header 
+    color: $dark_text
+    font-size: 30px
+    font-weight: 700
+    line-height: 24px
+    align-self: center
+    margin-bottom: 16px
+
+
+.fetured-p 
+    color: #9f9f9f
+    font-size: 14px
+    font-weight: 400
+    line-height: 12px
+    align-self: center
+
+
+.fetured-items 
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-top: 30px
+
+
+.fetured-item-price 
+    display: block
+    margin-top: 17px
+
+
+.fetured-item-name 
+    color: $dark_text
+    font-size: 13px
+    font-weight: 400
+    text-transform: uppercase
+    margin-top: 20px
+    margin-left: 15px
+
+
+.btn-fetures 
+    width: 212px
+    height: 48px
+    line-height: 48px
+    background-color: $pink
+    color: $white
+    font-size: 16px
+    font-weight: 400
+    text-align: center
+    text-decoration: none
+    margin-top: 50px
+    box-sizing: border-box
+    align-self: center
+
+
+.btn-fetures:hover 
+    @extend %shadow
+    animation: shadow-drop-br 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+
+.fetured-item 
+    display: block
+    text-decoration: none
+    width: 263px
+    height: 364px
+    box-sizing: border-box
+    margin-top: 39px
+    position: relative
+    &:hover .fetured-item-img
+        filter: brightness(40%)
+    &:hover .add-product
+        display: flex
+    &:hover
+        @extend %shadow
+        animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+.add-product 
+    display: none
+    position: absolute
+    width: 263px
+    top: 97px
+    justify-content: center
+
+.add 
+    color: $white
+    font-size: 13px
+    font-weight: 700
+    padding: 14px
+    border: 1px solid $white
+    text-decoration: none
+
+.fetured-item-link 
+    text-decoration: none
+
+
+.sales-img 
+    height: 529px
+    background: url(../img/bunner2.jpg) $dark_text no-repeat
+    justify-content: space-between
+
+
+.sales-head-big 
+    color: $white
+    font-size: 54px
+    font-weight: 700
+    text-transform: uppercase
+
+
+.sales-head-small 
+    font-size: 32px
+
+
+.sales-goods 
+    max-width: 373px
+    margin-top: 55px
+
+
+.sales-text 
+    margin-top: 146px
+    margin-left: 39px
+
+
+.sales 
+    margin-top: 113px
+
+
+.sales-good 
+    position: relative
+    color: #fbfbfb
+    font-size: 14px
+    font-weight: 300
+    margin-bottom: 62px
+    margin-left: 111px
+    margin-right: 43px
+
+
+.sales-good-big 
+    display: block
+    color: #fbfbfb
+    font-size: 20px
+    font-weight: 700
+    margin-bottom: 17px
+
+
+.sales-good-mark1 
+    position: absolute
+    top: -7px
+    left: -78px
+
+
+.sales-good-mark2 
+    position: absolute
+    top: -8px
+    left: -77px
+
+
+.sales-good-mark3 
+    position: absolute
+    top: -10px
+    left: -82px
+
+
+.comment 
+    background: url(../img/comment_back.jpg) no-repeat center
+    height: 438px
+    margin-top: 97px
+
+
+.comment-left 
+    width: 50%
+    height: 438px
+    border-right: 1px solid $white
+    margin-left: 111px
+
+
+.comment-right 
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 50%
+
+
+.comment-left-text 
+    position: relative
+    margin-top: 143px
+
+
+.comment-left-review 
+    color: $dark_text
+    font-size: 16px
+    font-weight: 400
+    font-style: italic
+    margin-right: 72px
+
+
+.comment-left-face 
+    position: absolute
+    top: -12px
+    left: -111px
+
+
+.comment-left-name 
+    color: $dark_text
+    font-size: 12px
+    font-weight: 300
+
+
+.comment-left-span 
+    display: block
+    color: $pink
+    font-size: 16px
+    font-weight: 700
+    margin-top: 19px
+
+
+.carusel-list 
+    list-style: none
+    font-size: 0
+    width: 38px
+    height: 4px
+    background-color: #d6d6d6
+    margin-right: 13px
+
+
+.carusel-list:last-child 
+    margin-right: 0
+
+
+.carusel 
+    display: flex
+    margin-top: 41px
+
+
+.carusel-active 
+    background-color: $pink
+
+
+.subscribe 
+    text-transform: uppercase
+    color: $dark_text
+    font-size: 14px
+    font-weight: 400
+    text-align: center
+    align-self: center
+
+
+.subscribe-head 
+    display: flex
+    color: $dark_text
+    font-size: 24px
+    text-transform: uppercase
+    text-align: center
+    width: min-content
+    align-self: center
+
+
+.subscribe-form 
+    margin-top: 35px
+    width: 386px
+    //height: 46px
+    align-self: center
+
+.menu-center 
+    justify-content: center
+
+.subscribe-form:hover
+    animation: shake-bottom 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both
+.subscribe-email 
+    border: none
+    border-top-left-radius: 23px
+    border-bottom-left-radius: 23px
+    background-color: #e1e1e1
+    width: 242px
+    height: 46px
+    opacity: 0.67
+    color: $dark_text
+    font-size: 14px
+    font-weight: 400
+    padding-left: 28px
+    cursor: pointer
+    &:hover
+        @extend %shadow
+    &:hover+.subscribe-button
+        @extend %shadow
+    &:focus
+        background-color: $white
+        outline: none
+        @extend %shadow
+    &:focus+.subscribe-button
+        @extend %shadow
+
+
+.subscribe-button 
+    border: none
+    border-radius: 0 23px 23px 0
+    background-color: $pink
+    width: 104px
+    height: 46px
+    color: $white
+    font-size: 14px
+    font-weight: 400
+    cursor: pointer
+
+
+.about 
+    height: 428px
+    margin-top: 109px
+
+
+.about-info-p 
+    width: 427px
+    margin-top: 29px
+    color: #898989
+    font-size: 14px
+    font-weight: 300
+    line-height: 24px
+
+
+.about-flex 
+    display: flex
+    justify-content: space-around
+
+
+.about-logo 
+    align-self: flex-start
+
+
+
+.about-left 
+    flex-direction: column
+    margin-right: 63px
+
+
+.about-info-text 
+    margin-top: 20px
+
+
+.about-container-head 
+    color: #f16d7f
+    font-size: 18px
+    font-weight: 700
+    text-transform: uppercase
+    margin-bottom: 45px
+
+
+.about-container-list 
+    list-style: none
+    color: #898989
+    font-size: 16px
+    font-weight: 400
+
+
+.about-container-link 
+    text-decoration: none
+    color: #898989
+    &:visited
+        color: #898989
+    &:hover
+        color: $pink
+
+
+.about-container-element 
+    margin-bottom: 20px
+
+.footer-flex 
+    justify-content: space-between
+    align-items: center
+
+
+.footer-rights 
+    color: #7a7a7a
+    font-size: 16px
+    font-weight: 400
+    width: max-content
+
+
+.social-element 
+    width: 32px
+    height: 32px
+    background: $white
+    margin-left: 8px
+    display: flex
+    justify-content: center
+    align-items: center
+    color: #b2b2b2
+    font-size: 16px
+    font-weight: 400
+    &:hover
+        background-color: #f16d7f
+        color: #f7f7f8
+    &:hover .fade-in
+        animation: rotate-center 0.6s ease-in-out both
+
+.social-element-notactive
+    opacity: 0.5
+    &:hover
+        background: $white
+        color: #b2b2b2
+
+.social 
+    display: flex
+
+.search-form 
+    height: 38px
+    float: left
+
+.browse-fa-caret-down
+    color: #838383
+    font-size: 14px
+    font-weight: 400
+    padding-left: 8px
+
+.account-fa-caret-down 
+    float: right
+    color: $white
+    font-size: 10px
+
+.product-fa-long-arrow-right 
+    color: $white
+    font-size: 15px
+    font-weight: 400
+    padding-left: 9px
+
+.bottom 
+    display: flex
+    background-color: $lite_gray_border
+    height: 79px
+
+
+.social-link 
+    text-decoration: none
+
+@import "drop_menu"
+
+@import "product"
+
+@import "singlepage"
+
+@import "cart"
+
+@import 'checkout'
