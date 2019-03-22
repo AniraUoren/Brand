@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "img": "img/item1.png",
+    "img": "img/item1.jpg",
     "title": "Mango People T-shirt",
     "link": "single_page.html",
-    "price": "52",
+    "price": "52.00",
     "quantity": 1
   }
 ]
