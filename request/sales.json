@@ -1,26 +1,30 @@
 [
   {
     "id": 1,
-    "title": "hot deal for men",
+    "title": "HOT DEAL<span class=\"pink help\">FOR MEN</span>",
     "img": "img/sell_men.jpg",
-    "link": "#"
+    "link": "#",
+    "class": "sell-item1"
   },
   {
     "id": 2,
     "title": "luxirous & trendy accesories",
     "img": "img/sell_accesories.jpg",
-    "link": "#"
+    "link": "#",
+    "class": "sell-item3"
   },
   {
     "id": 3,
     "title": "30% offer women",
     "img": "img/sell_women.jpg",
-    "link": "#"
+    "link": "#",
+    "class": "sell-item2"
   },
   {
     "id": 4,
     "title": "new arrivals for kids",
     "img": "img/sell_kids.jpg",
-    "link": "#"
+    "link": "#",
+    "class":"sell-item4"
   }
 ]
