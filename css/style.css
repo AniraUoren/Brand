@@ -1031,9 +1031,6 @@ body {
   flex-wrap: wrap;
   justify-content: space-between; }
 
-.store-item-img {
-  filter: brightness(40%); }
-
 .store-item-link {
   text-decoration: none; }
   .store-item-link:hover .store-item-img {
