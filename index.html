@@ -27,45 +27,7 @@
                     </div>
                 </div>
                 <div class="header-right">
-                    <div class="cart-link">
-                        <div class="cart-link-container"><a href="shopping_cart.html">
-                            <img class="cart-img" src="img/cart.svg" alt="cart"></a>
-                            <div class="drop-cart">
-                                <div class="drop-cart-item">
-                                    <div class="drop-cart-item-flex pic">
-                                        <img src="img/cart_item-small1.jpg" alt="Item" class="drop-cart-image">
-                                    </div>
-                                    <div class="drop-cart-item-flex drop-cart-item-big">
-                                        <a href="single_page.html" class="drop-cart-link"><p class="drop-cart-description">Rebox Zane</p></a>
-                                        <div class="drop-cart-stars"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></div>
-                                        <p class="drop-cart-price">1 x $250</p>
-                                    </div>
-                                    <div class="drop-cart-item-flex drop-cart-item-small">
-                                        <a href="#" class="drop-itemdelete-link"><i class="fa fa-plus-circle cart-itemcol-delete" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                                <div class="drop-cart-item">
-                                    <div class="drop-cart-item-flex pic">
-                                        <img src="img/cart_item-small2.jpg" alt="Item" class="drop-cart-image">
-                                    </div>
-                                    <div class="drop-cart-item-flex drop-cart-item-big">
-                                        <a href="single_page.html" class="drop-cart-link"><p class="drop-cart-description">Rebox Zane</p></a>
-                                        <div class="drop-cart-stars"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></div>
-                                        <p class="drop-cart-price">1 x $250</p>
-                                    </div>
-                                    <div class="drop-cart-item-flex drop-cart-item-small">
-                                        <a href="#" class="drop-itemdelete-link"><i class="fa fa-plus-circle cart-itemcol-delete" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                                <div class="drop-cart-totalprice">
-                                    <p class="drop-cart-t_text">TOTAL</p>
-                                    <p class="drop-cart-t_price">$500.00</p>
-                                </div>
-                                <a href="#" class="drop-cart-button">Checkout</a>
-                                <a href="#" class="drop-cart-button">Go to cart</a>
-                            </div>
-                        </div>
-                    </div>
+                    <cart ref="cart"></cart>
                     <a href="#" class="btn-account">My Account<i class="fa fa-caret-down account-fa-caret-down" aria-hidden="true"></i></a>
                 </div>
             </div>
@@ -75,6 +37,7 @@
                 <ul class="menu">
                     <li class="menu-list"><a class="menu-link" href="index.html">home</a></li>
                     <li class="menu-list"><a class="menu-link" href="#">men</a>
+                        <!--modal-->
                         <div class="drop-flex">
                             <div class="drop-box">
                                 <h3 class="drop-heading">Women</h3>
@@ -116,6 +79,7 @@
                                 <img class="drop-img" src="img/menu_supersale.jpg" alt="Sales">
                             </div>
                         </div>
+                        <!--modal-->
                     </li>
                     <li class="menu-list"><a class="menu-link" href="#">women</a></li>
                     <li class="menu-list"><a class="menu-link" href="#">kids</a></li>
@@ -136,87 +100,65 @@
         </div>
 
         <div class="sells">
-            <div class="container sell">
-                <a href="#" class="sellitem-link">
-                    <div class="sell-item1">
-                        <p class="sell-item-text">HOT DEAL<span class="pink help">FOR MEN</span></p>
-                    </div>
-                </a>
-                <a href="#" class="sellitem-link">
-                    <div class="sell-item3">
-                        <p class="sell-item-text">LUXIROUS & trendy<span class="pink help">ACCESORIES</span></p>
-
-                    </div>
-                </a>
-                <a href="#" class="sellitem-link">
-                    <div class="sell-item2">
-                        <p class="sell-item-text">30% offer<span class="pink help">women</span></p>
-                    </div>
-                </a>
-                <a href="#" class="sellitem-link">
-                    <div class="sell-item4">
-                        <p class="sell-item-text">new arrivals<span class="pink help">FOR kids</span></p>
-
-                    </div>
-                </a>
-            </div>
+            <sales ref="sales"></sales>
         </div>
         <section class="fetured">
             <div class="container fetured-block">
-                <h3 class="fetured-header">Fetured Items</h3>
+                <h3 class="fetured-header">Featured Items</h3>
                 <p class="fetured-p">Shop for items based on what we featured in this week</p>
 
                 <div class="fetured-items">
-                    <a href="single_page.html" class="fetured-item-link">
-                        <div class="fetured-item"><img class="fetured-item-img" src="img/fetured_1.jpg" alt="fetured_1">
-                            <p class="fetured-item-name">Mango People T-shirt<span class="pink fetured-item-price">$52.00</span></p>
-                            <div class="add-product"><a href="#" class="add">Add to Cart</a></div>
-                        </div>
-                    </a>
+                    <!--<a href="single_page.html" class="fetured-item-link">-->
+                        <!--<div class="fetured-item"><img class="fetured-item-img" src="img/fetured_1.jpg" alt="fetured_1">-->
+                            <!--<p class="fetured-item-name">Mango People T-shirt<span class="pink fetured-item-price">$52.00</span></p>-->
+                            <!--<div class="add-product"><a href="#" class="add">Add to Cart</a></div>-->
+                        <!--</div>-->
+                    <!--</a>-->
 
-                    <a href="single_page.html" class="fetured-item-link">
-                        <div class="fetured-item"><img class="fetured-item-img" src="img/fetured_2.jpg" alt="fetured_2">
-                            <p class="fetured-item-name">Mango People T-shirt<span class="pink fetured-item-price">$52.00</span></p>
-                            <div class="add-product"><a href="#" class="add">Add to Cart</a></div>
-                        </div>
-                    </a>
+                    <!--<a href="single_page.html" class="fetured-item-link">-->
+                        <!--<div class="fetured-item"><img class="fetured-item-img" src="img/fetured_2.jpg" alt="fetured_2">-->
+                            <!--<p class="fetured-item-name">Mango People T-shirt<span class="pink fetured-item-price">$52.00</span></p>-->
+                            <!--<div class="add-product"><a href="#" class="add">Add to Cart</a></div>-->
+                        <!--</div>-->
+                    <!--</a>-->
 
-                    <a href="single_page.html" class="fetured-item-link">
-                        <div class="fetured-item"><img class="fetured-item-img" src="img/fetured_3.jpg" alt="fetured_3">
-                            <p class="fetured-item-name">Mango People T-shirt<span class="pink fetured-item-price">$52.00</span></p>
-                            <div class="add-product"><a href="#" class="add">Add to Cart</a></div>
-                        </div>
-                    </a>
-                    <a href="single_page.html" class="fetured-item-link">
-                        <div class="fetured-item"><img class="fetured-item-img" src="img/fetured_4.jpg" alt="fetured_4">
-                            <p class="fetured-item-name">Mango People T-shirt<span class="pink fetured-item-price">$52.00</span></p>
-                            <div class="add-product"><a href="#" class="add">Add to Cart</a></div>
-                        </div>
-                    </a>
-                    <a href="single_page.html" class="fetured-item-link">
-                        <div class="fetured-item"><img class="fetured-item-img" src="img/fetured_5.jpg" alt="fetured_5">
-                            <p class="fetured-item-name">Mango People T-shirt<span class="pink fetured-item-price">$52.00</span></p>
-                            <div class="add-product"><a href="#" class="add">Add to Cart</a></div>
-                        </div>
-                    </a>
-                    <a href="single_page.html" class="fetured-item-link">
-                        <div class="fetured-item"><img class="fetured-item-img" src="img/fetured_6.jpg" alt="fetured_6">
-                            <p class="fetured-item-name">Mango People T-shirt<span class="pink fetured-item-price">$52.00</span></p>
-                            <div class="add-product"><a href="#" class="add">Add to Cart</a></div>
-                        </div>
-                    </a>
-                    <a href="single_page.html" class="fetured-item-link">
-                        <div class="fetured-item"><img class="fetured-item-img" src="img/fetured_7.jpg" alt="fetured_7">
-                            <p class="fetured-item-name">Mango People T-shirt<span class="pink fetured-item-price">$52.00</span></p>
-                            <div class="add-product"><a href="#" class="add">Add to Cart</a></div>
-                        </div>
-                    </a>
-                    <a href="single_page.html" class="fetured-item-link">
-                        <div class="fetured-item"><img class="fetured-item-img" src="img/fetured_8.jpg" alt="fetured_8">
-                            <p class="fetured-item-name">Mango People T-shirt<span class="pink fetured-item-price">$52.00</span></p>
-                            <div class="add-product"><a href="#" class="add">Add to Cart</a></div>
-                        </div>
-                    </a>
+                    <!--<a href="single_page.html" class="fetured-item-link">-->
+                        <!--<div class="fetured-item"><img class="fetured-item-img" src="img/fetured_3.jpg" alt="fetured_3">-->
+                            <!--<p class="fetured-item-name">Mango People T-shirt<span class="pink fetured-item-price">$52.00</span></p>-->
+                            <!--<div class="add-product"><a href="#" class="add">Add to Cart</a></div>-->
+                        <!--</div>-->
+                    <!--</a>-->
+                    <!--<a href="single_page.html" class="fetured-item-link">-->
+                        <!--<div class="fetured-item"><img class="fetured-item-img" src="img/fetured_4.jpg" alt="fetured_4">-->
+                            <!--<p class="fetured-item-name">Mango People T-shirt<span class="pink fetured-item-price">$52.00</span></p>-->
+                            <!--<div class="add-product"><a href="#" class="add">Add to Cart</a></div>-->
+                        <!--</div>-->
+                    <!--</a>-->
+                    <!--<a href="single_page.html" class="fetured-item-link">-->
+                        <!--<div class="fetured-item"><img class="fetured-item-img" src="img/fetured_5.jpg" alt="fetured_5">-->
+                            <!--<p class="fetured-item-name">Mango People T-shirt<span class="pink fetured-item-price">$52.00</span></p>-->
+                            <!--<div class="add-product"><a href="#" class="add">Add to Cart</a></div>-->
+                        <!--</div>-->
+                    <!--</a>-->
+                    <!--<a href="single_page.html" class="fetured-item-link">-->
+                        <!--<div class="fetured-item"><img class="fetured-item-img" src="img/fetured_6.jpg" alt="fetured_6">-->
+                            <!--<p class="fetured-item-name">Mango People T-shirt<span class="pink fetured-item-price">$52.00</span></p>-->
+                            <!--<div class="add-product"><a href="#" class="add">Add to Cart</a></div>-->
+                        <!--</div>-->
+                    <!--</a>-->
+                    <!--<a href="single_page.html" class="fetured-item-link">-->
+                        <!--<div class="fetured-item"><img class="fetured-item-img" src="img/fetured_7.jpg" alt="fetured_7">-->
+                            <!--<p class="fetured-item-name">Mango People T-shirt<span class="pink fetured-item-price">$52.00</span></p>-->
+                            <!--<div class="add-product"><a href="#" class="add">Add to Cart</a></div>-->
+                        <!--</div>-->
+                    <!--</a>-->
+                    <!--<a href="single_page.html" class="fetured-item-link">-->
+                        <!--<div class="fetured-item"><img class="fetured-item-img" src="img/fetured_8.jpg" alt="fetured_8">-->
+                            <!--<p class="fetured-item-name">Mango People T-shirt<span class="pink fetured-item-price">$52.00</span></p>-->
+                            <!--<div class="add-product"><a href="#" class="add">Add to Cart</a></div>-->
+                        <!--</div>-->
+                    <!--</a>-->
+                    <featured ref="featured"></featured>
                 </div>
 
                 <a href="product.html" class="btn-fetures">Browse All Product <i class="fa fa-long-arrow-right product-fa-long-arrow-right" aria-hidden="true"></i></a>
@@ -340,6 +282,9 @@
     </div>
 
     <script src="js/vue.js"></script>
+    <script src="js/vue_components/sales_comp.js"></script>
+    <script src="js/vue_components/featured_comp.js"></script>
+    <script src="js/vue_components/cart_comp.js"></script>
     <script src="js/main.js"></script>
 </body>
 

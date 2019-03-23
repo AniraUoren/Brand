@@ -11,196 +11,104 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="container header-flex">
-            <div class="header-left">
-                <a class="logo-link" href="index.html">
-                    <img src="img/logo.png" alt="logo">
-                    bran<span class="pink">d</span>
-                </a>
-                <div>
-                    <div class="btn-browse">Browse <i class="fa fa-caret-down browse-fa-caret-down" aria-hidden="true"></i></div>
-                    <form class="search-form" action="#" name="search">
-                        <input class="search-input" type="text" name="search" placeholder="Search for item..."><button class="search-submit" type="submit">?</button>
-                    </form>
+    <div id="app">
+        <header class="header">
+            <div class="container header-flex">
+                <div class="header-left">
+                    <a class="logo-link" href="index.html">
+                        <img src="img/logo.png" alt="logo">
+                        bran<span class="pink">d</span>
+                    </a>
+                    <div>
+                        <div class="btn-browse">Browse <i class="fa fa-caret-down browse-fa-caret-down" aria-hidden="true"></i></div>
+                        <form class="search-form" action="#" name="search">
+                            <input class="search-input" type="text" name="search" placeholder="Search for item..."><button class="search-submit" type="submit">?</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <cart ref="cart"></cart>
+                    <a href="#" class="btn-account">My Account<i class="fa fa-caret-down account-fa-caret-down" aria-hidden="true"></i></a>
                 </div>
             </div>
-            <div class="header-right">
-                <a href="shopping_cart.html" class="cart-link">
-                    <img class="cart-img" src="img/cart.svg" alt="cart">
-                </a>
-                <div class="drop-cart">
-                    <div class="drop-cart-item">
-                        <div class="drop-cart-item-flex pic">
-                            <img src="img/cart_item-small1.jpg" alt="Item" class="drop-cart-image">
-                        </div>
-                        <div class="drop-cart-item-flex drop-cart-item-big">
-                            <p class="drop-cart-description">Rebox Zane</p>
-                            <div class="drop-cart-stars"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></div>
-                            <p class="drop-cart-price">1 x $250</p>
-                        </div>
-                        <div class="drop-cart-item-flex drop-cart-item-small">
-                            <a href="#" class="drop-itemdelete-link"><i class="fa fa-plus-circle cart-itemcol-delete" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <div class="drop-cart-item">
-                        <div class="drop-cart-item-flex pic">
-                            <img src="img/cart_item-small2.jpg" alt="Item" class="drop-cart-image">
-                        </div>
-                        <div class="drop-cart-item-flex drop-cart-item-big">
-                            <p class="drop-cart-description">Rebox Zane</p>
-                            <div class="drop-cart-stars"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></div>
-                            <p class="drop-cart-price">1 x $250</p>
-                        </div>
-                        <div class="drop-cart-item-flex drop-cart-item-small">
-                            <a href="#" class="drop-itemdelete-link"><i class="fa fa-plus-circle cart-itemcol-delete" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                    <div class="drop-cart-totalprice">
-                        <p class="drop-cart-t_text">TOTAL</p>
-                        <p class="drop-cart-t_price">$500.00</p>
-                    </div>
-                    <a href="#" class="drop-cart-button">Checkout</a>
-                    <a href="#" class="drop-cart-button">Go to cart</a>
-                </div>
-                <a href="#" class="btn-account">My Account<i class="fa fa-caret-down account-fa-caret-down" aria-hidden="true"></i></a>
-            </div>
-        </div>
-    </header>
-    <nav class="navigation">
-        <div class="container menu-center">
-            <ul class="menu">
-                <li class="menu-list"><a class="menu-link" href="index.html">home</a></li>
-                <li class="menu-list"><a class="menu-link" href="#">men</a>
-                    <div class="drop-flex">
-                        <div class="drop-box">
-                            <h3 class="drop-heading">Women</h3>
-                            <ul class="drop-ul">
-                                <li><a href="#" class="drop-link">Dresses</a></li>
-                                <li><a href="#" class="drop-link">Tops</a></li>
-                                <li><a href="#" class="drop-link">Sweaters/Knits</a></li>
-                                <li><a href="#" class="drop-link">Jackets/Coats</a></li>
-                                <li><a href="#" class="drop-link">Blazers</a></li>
-                                <li><a href="#" class="drop-link">Denim</a></li>
-                                <li><a href="#" class="drop-link">Leggings/Pants</a></li>
-                                <li><a href="#" class="drop-link">Skirts/Shorts</a></li>
-                                <li><a href="#" class="drop-link">Accessories</a></li>
-                            </ul>
-                        </div>
-                        <div class="drop-box">
-                            <h3 class="drop-heading">Women</h3>
-                            <ul class="drop-ul">
-                                <li><a href="#" class="drop-link">Dresses</a></li>
-                                <li><a href="#" class="drop-link">Tops</a></li>
-                                <li><a href="#" class="drop-link">Sweaters/Knits</a></li>
-                                <li><a href="#" class="drop-link">Jackets/Coats</a></li>
-                            </ul>
-                            <h3 class="drop-heading">Women</h3>
-                            <ul class="drop-ul">
-                                <li><a href="#" class="drop-link">Dresses</a></li>
-                                <li><a href="#" class="drop-link">Tops</a></li>
-                                <li><a href="#" class="drop-link">Sweaters/Knits</a></li>
-                            </ul>
-                        </div>
-                        <div class="drop-box">
-                            <h3 class="drop-heading">Women</h3>
-                            <ul class="drop-ul">
-                                <li><a href="#" class="drop-link">Dresses</a></li>
-                                <li><a href="#" class="drop-link">Tops</a></li>
-                                <li><a href="#" class="drop-link">Sweaters/Knits</a></li>
-                                <li><a href="#" class="drop-link">Jackets/Coats</a></li>
-                            </ul>
-                            <img class="drop-img" src="img/menu_supersale.jpg" alt="Sales">
-                        </div>
-                    </div>
-                </li>
-                <li class="menu-list"><a class="menu-link" href="#">women</a></li>
-                <li class="menu-list"><a class="menu-link" href="#">kids</a></li>
-                <li class="menu-list"><a class="menu-link" href="#">accoseriese</a></li>
-                <li class="menu-list"><a class="menu-link" href="#">featured</a></li>
-                <li class="menu-list"><a class="menu-link" href="#">hot deals</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main>
-        <div class="head-page">
-            <div class="container head-page-flex">
-                <h2 class="head-page-h">New Arrivals</h2>
-                <nav class="breadcrumps">
-                    <ul class="breadcrumps-list">
-                        <li class="breadcrumps-element"><a href="index.html" class="breadcrumps-link">Home</a></li>
-                        <li class="breadcrumps-element"><a href="product.html" class="breadcrumps-link">Men</a></li>
-                        <li class="breadcrumps-element"><a href="#" class="breadcrumps-link">New Arrivals</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-
-        <div class="cart">
-            <div class="container">
-                <div class="cart-flex">
-                    <div class="cart-header">
-                        <div class="cart-headcol"><p class="cart-headcol-p">Product Details</p></div>
-                        <div class="cart-headcol"><p class="cart-headcol-p">unite Price</p></div>
-                        <div class="cart-headcol"><p class="cart-headcol-p">Quantity</p></div>
-                        <div class="cart-headcol"><p class="cart-headcol-p">shipping</p></div>
-                        <div class="cart-headcol"><p class="cart-headcol-p">Subtotal</p></div>
-                        <div class="cart-headcol"><p class="cart-headcol-p">ACTION</p></div>
-                    </div>
-                    <div class="cart-item">
-                        <div class="cart-itemcol">
-                            <img src="img/cart_item1.jpg" alt="Item" class="cart-itemcol-img">
-                            <div class="cart-itemcol-description">
-                                <a href="single_page.html" class="cart-itemcol-link"><p class="cart-itemcol-p cart-itemcol-p-self">Mango  People  T-shirt</p></a>
-                                <p class="cart-itemcol-p">Color:<span class="cart-itemcol-span">Red</span></p>
-                                <p class="cart-itemcol-p">Size:<span class="cart-itemcol-span">XII</span></p>
+        </header>
+        <nav class="navigation">
+            <div class="container menu-center">
+                <ul class="menu">
+                    <li class="menu-list"><a class="menu-link" href="index.html">home</a></li>
+                    <li class="menu-list"><a class="menu-link" href="#">men</a>
+                        <div class="drop-flex">
+                            <div class="drop-box">
+                                <h3 class="drop-heading">Women</h3>
+                                <ul class="drop-ul">
+                                    <li><a href="#" class="drop-link">Dresses</a></li>
+                                    <li><a href="#" class="drop-link">Tops</a></li>
+                                    <li><a href="#" class="drop-link">Sweaters/Knits</a></li>
+                                    <li><a href="#" class="drop-link">Jackets/Coats</a></li>
+                                    <li><a href="#" class="drop-link">Blazers</a></li>
+                                    <li><a href="#" class="drop-link">Denim</a></li>
+                                    <li><a href="#" class="drop-link">Leggings/Pants</a></li>
+                                    <li><a href="#" class="drop-link">Skirts/Shorts</a></li>
+                                    <li><a href="#" class="drop-link">Accessories</a></li>
+                                </ul>
+                            </div>
+                            <div class="drop-box">
+                                <h3 class="drop-heading">Women</h3>
+                                <ul class="drop-ul">
+                                    <li><a href="#" class="drop-link">Dresses</a></li>
+                                    <li><a href="#" class="drop-link">Tops</a></li>
+                                    <li><a href="#" class="drop-link">Sweaters/Knits</a></li>
+                                    <li><a href="#" class="drop-link">Jackets/Coats</a></li>
+                                </ul>
+                                <h3 class="drop-heading">Women</h3>
+                                <ul class="drop-ul">
+                                    <li><a href="#" class="drop-link">Dresses</a></li>
+                                    <li><a href="#" class="drop-link">Tops</a></li>
+                                    <li><a href="#" class="drop-link">Sweaters/Knits</a></li>
+                                </ul>
+                            </div>
+                            <div class="drop-box">
+                                <h3 class="drop-heading">Women</h3>
+                                <ul class="drop-ul">
+                                    <li><a href="#" class="drop-link">Dresses</a></li>
+                                    <li><a href="#" class="drop-link">Tops</a></li>
+                                    <li><a href="#" class="drop-link">Sweaters/Knits</a></li>
+                                    <li><a href="#" class="drop-link">Jackets/Coats</a></li>
+                                </ul>
+                                <img class="drop-img" src="img/menu_supersale.jpg" alt="Sales">
                             </div>
                         </div>
-                        <div class="cart-itemcol"><p class="cart-itemcol-p-other">$150</p></div>
-                        <div class="cart-itemcol">
-                            <form action=""><input type="number" name="size" class="cart-itemcol-size" min="0" value="2"></form></div>
-                        <div class="cart-itemcol"><p class="cart-itemcol-p-other">FREE</p></div>
-                        <div class="cart-itemcol"><p class="cart-itemcol-p-other">$300</p></div>
-                        <div class="cart-itemcol"><a href="#" class="cart-itemcol-delete-link"><i class="fa fa-plus-circle cart-itemcol-delete" aria-hidden="true"></i></a></div>
-                    </div>
-                    <div class="cart-item">
-                    <div class="cart-itemcol">
-                        <img src="img/cart_item2.jpg" alt="Item" class="cart-itemcol-img">
-                        <div class="cart-itemcol-description">
-                            <a href="single_page.html" class="cart-itemcol-link"><p class="cart-itemcol-p cart-itemcol-p-self">Mango  People  T-shirt</p></a>
-                            <p class="cart-itemcol-p">Color:<span class="cart-itemcol-span">Red</span></p>
-                            <p class="cart-itemcol-p">Size:<span class="cart-itemcol-span">XII</span></p>
-                        </div>
-                    </div>
-                    <div class="cart-itemcol"><p class="cart-itemcol-p-other">$150</p></div>
-                    <div class="cart-itemcol">
-                        <form action=""><input type="number" name="size" class="cart-itemcol-size" min="0" value="2"></form></div>
-                    <div class="cart-itemcol"><p class="cart-itemcol-p-other">FREE</p></div>
-                    <div class="cart-itemcol"><p class="cart-itemcol-p-other">$300</p></div>
-                    <div class="cart-itemcol"><a href="#" class="cart-itemcol-delete-link"><i class="fa fa-plus-circle cart-itemcol-delete" aria-hidden="true"></i></a></div>
-                    </div>
-                    <div class="cart-item">
-                        <div class="cart-itemcol">
-                            <img src="img/cart_item3.jpg" alt="Item" class="cart-itemcol-img">
-                            <div class="cart-itemcol-description">
-                                <a href="single_page.html" class="cart-itemcol-link"><p class="cart-itemcol-p cart-itemcol-p-self">Mango  People  T-shirt</p></a>
-                                <p class="cart-itemcol-p">Color:<span class="cart-itemcol-span">Red</span></p>
-                                <p class="cart-itemcol-p">Size:<span class="cart-itemcol-span">XII</span></p>
-                            </div>
-                        </div>
-                        <div class="cart-itemcol"><p class="cart-itemcol-p-other">$150</p></div>
-                        <div class="cart-itemcol">
-                            <form action=""><input type="number" name="size" class="cart-itemcol-size" min="0" value="2"></form></div>
-                        <div class="cart-itemcol"><p class="cart-itemcol-p-other">FREE</p></div>
-                        <div class="cart-itemcol"><p class="cart-itemcol-p-other">$300</p></div>
-                        <div class="cart-itemcol"><a href="#" class="cart-itemcol-delete-link"><i class="fa fa-plus-circle cart-itemcol-delete" aria-hidden="true"></i></a></div>
-                    </div>
+                    </li>
+                    <li class="menu-list"><a class="menu-link" href="#">women</a></li>
+                    <li class="menu-list"><a class="menu-link" href="#">kids</a></li>
+                    <li class="menu-list"><a class="menu-link" href="#">accoseriese</a></li>
+                    <li class="menu-list"><a class="menu-link" href="#">featured</a></li>
+                    <li class="menu-list"><a class="menu-link" href="#">hot deals</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <div class="head-page">
+                <div class="container head-page-flex">
+                    <h2 class="head-page-h">New Arrivals</h2>
+                    <nav class="breadcrumps">
+                        <ul class="breadcrumps-list">
+                            <li class="breadcrumps-element"><a href="index.html" class="breadcrumps-link">Home</a></li>
+                            <li class="breadcrumps-element"><a href="product.html" class="breadcrumps-link">Men</a></li>
+                            <li class="breadcrumps-element"><a href="#" class="breadcrumps-link">New Arrivals</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-        </div>
 
-       
+            <div class="cart">
+                <div class="container">
+                    <cart-page ref="cart-page"></cart-page>
+                </div>
+            </div>
+
+
             <div class="container">
                 <div class="buttons-flex">
                     <a href="#" class="cart-clear-link">cLEAR SHOPPING CART</a>
@@ -247,102 +155,109 @@
                 </div>
             </div>
 
-    </main>
-    <footer class="footer">
-        <div class="comment">
-            <div class="container">
-                <div class="comment-left">
-                    <div class="comment-left-text">
-                        <img class="comment-left-face" src="img/comment-face.png" alt="Commentator">
-                        <p class="comment-left-review">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
-                        <p class="comment-left-name">
-                            <span class="comment-left-span">Bin Burhan</span> Dhaka, Bd
-                        </p>
+        </main>
+        <footer class="footer">
+            <div class="comment">
+                <div class="container">
+                    <div class="comment-left">
+                        <div class="comment-left-text">
+                            <img class="comment-left-face" src="img/comment-face.png" alt="Commentator">
+                            <p class="comment-left-review">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
+                            <p class="comment-left-name">
+                                <span class="comment-left-span">Bin Burhan</span> Dhaka, Bd
+                            </p>
+                        </div>
+                        <ul class="carusel">
+                            <li class="carusel-list">1</li>
+                            <li class="carusel-list carusel-active">2</li>
+                            <li class="carusel-list">3</li>
+                        </ul>
                     </div>
-                    <ul class="carusel">
-                        <li class="carusel-list">1</li>
-                        <li class="carusel-list carusel-active">2</li>
-                        <li class="carusel-list">3</li>
-                    </ul>
-                </div>
-                <div class="comment-right">
-                    <h3 class="subscribe-head">Subscribe</h3>
-                    <p class="subscribe">FOR OUR NEWLETTER AND PROMOTION</p>
-                    <form class="subscribe-form" action="#">
-                        <input class="subscribe-email" type="text" name="subs_mail" placeholder="Enter Your Email" pattern="\S+@[a-z]+.[a-z]+" required><input class="subscribe-button" type="submit" value="Subscribe">
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="about">
-            <div class="container about-flex">
-                <div class="about-left">
-                    <a class="logo-link" href="#">
-                        <img src="img/logo.png" alt="logo">
-                        bran<span class="pink">d</span>
-                    </a>
-                    <div class="about-info-p">
-                        <p class="about-info-text">Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.
-                        </p>
-                        <p class="about-info-text">Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
+                    <div class="comment-right">
+                        <h3 class="subscribe-head">Subscribe</h3>
+                        <p class="subscribe">FOR OUR NEWLETTER AND PROMOTION</p>
+                        <form class="subscribe-form" action="#">
+                            <input class="subscribe-email" type="text" name="subs_mail" placeholder="Enter Your Email" pattern="\S+@[a-z]+.[a-z]+" required><input class="subscribe-button" type="submit" value="Subscribe">
+                        </form>
                     </div>
                 </div>
-                <div class="about-container">
-                    <h3 class="about-container-head">COMPANY</h3>
-                    <ul class="about-container-list">
-                        <li class="about-container-element"><a href="index.html" class="about-container-link">Home</a></li>
-                        <li class="about-container-element"><a href="#" class="about-container-link">Shop</a></li>
-                        <li class="about-container-element"><a href="#" class="about-container-link">About</a></li>
-                        <li class="about-container-element"><a href="#" class="about-container-link">How It Works</a></li>
-                        <li class="about-container-element"><a href="#" class="about-container-link">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="about-container">
-                    <h3 class="about-container-head">INFORMATION</h3>
-                    <ul class="about-container-list">
-                        <li class="about-container-element"><a href="#" class="about-container-link">Tearms & Condition</a></li>
-                        <li class="about-container-element"><a href="#" class="about-container-link">Privacy Policy</a></li>
-                        <li class="about-container-element"><a href="#" class="about-container-link">How to Buy</a></li>
-                        <li class="about-container-element"><a href="#" class="about-container-link">How to Sell</a></li>
-                        <li class="about-container-element"><a href="#" class="about-container-link">Promotion</a></li>
-                    </ul>
-                </div>
-                <div class="about-container">
-                    <h3 class="about-container-head">SHOP CATEGORY</h3>
-                    <ul class="about-container-list">
-                        <li class="about-container-element"><a href="product.html" class="about-container-link">Men</a></li>
-                        <li class="about-container-element"><a href="#" class="about-container-link">Women</a></li>
-                        <li class="about-container-element"><a href="#" class="about-container-link">Child</a></li>
-                        <li class="about-container-element"><a href="#" class="about-container-link">Apparel</a></li>
-                        <li class="about-container-element"><a href="#" class="about-container-link">Brows All</a></li>
-                    </ul>
+            </div>
+            <div class="about">
+                <div class="container about-flex">
+                    <div class="about-left">
+                        <a class="logo-link" href="#">
+                            <img src="img/logo.png" alt="logo">
+                            bran<span class="pink">d</span>
+                        </a>
+                        <div class="about-info-p">
+                            <p class="about-info-text">Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.
+                            </p>
+                            <p class="about-info-text">Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
+                        </div>
+                    </div>
+                    <div class="about-container">
+                        <h3 class="about-container-head">COMPANY</h3>
+                        <ul class="about-container-list">
+                            <li class="about-container-element"><a href="index.html" class="about-container-link">Home</a></li>
+                            <li class="about-container-element"><a href="#" class="about-container-link">Shop</a></li>
+                            <li class="about-container-element"><a href="#" class="about-container-link">About</a></li>
+                            <li class="about-container-element"><a href="#" class="about-container-link">How It Works</a></li>
+                            <li class="about-container-element"><a href="#" class="about-container-link">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="about-container">
+                        <h3 class="about-container-head">INFORMATION</h3>
+                        <ul class="about-container-list">
+                            <li class="about-container-element"><a href="#" class="about-container-link">Tearms & Condition</a></li>
+                            <li class="about-container-element"><a href="#" class="about-container-link">Privacy Policy</a></li>
+                            <li class="about-container-element"><a href="#" class="about-container-link">How to Buy</a></li>
+                            <li class="about-container-element"><a href="#" class="about-container-link">How to Sell</a></li>
+                            <li class="about-container-element"><a href="#" class="about-container-link">Promotion</a></li>
+                        </ul>
+                    </div>
+                    <div class="about-container">
+                        <h3 class="about-container-head">SHOP CATEGORY</h3>
+                        <ul class="about-container-list">
+                            <li class="about-container-element"><a href="product.html" class="about-container-link">Men</a></li>
+                            <li class="about-container-element"><a href="#" class="about-container-link">Women</a></li>
+                            <li class="about-container-element"><a href="#" class="about-container-link">Child</a></li>
+                            <li class="about-container-element"><a href="#" class="about-container-link">Apparel</a></li>
+                            <li class="about-container-element"><a href="#" class="about-container-link">Brows All</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="bottom">
-            <div class="container footer-flex">
-                <p class="footer-rights">&copy; 2017 Brand All Rights Reserved.</p>
-                <div class="social">
-                    <a href="#" class="social-link">
-                        <div class="social-element social-fb"><i class="fa fa-facebook fade-in" aria-hidden="true"></i></div>
-                    </a>
-                    <a href="#" class="social-link">
-                        <div class="social-element social-tw"><i class="fa fa-twitter fade-in" aria-hidden="true"></i></div>
-                    </a>
-                    <a href="#" class="social-link">
-                        <div class="social-element social-inst social-element-notactive"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-                    </a>
-                    <a href="#" class="social-link">
-                        <div class="social-element social-pint"><i class="fa fa-pinterest-p fade-in" aria-hidden="true"></i></div>
-                    </a>
-                    <a href="#" class="social-link">
-                        <div class="social-element social-g"><i class="fa fa-google-plus fade-in" aria-hidden="true"></i></div>
-                    </a>
+            <div class="bottom">
+                <div class="container footer-flex">
+                    <p class="footer-rights">&copy; 2017 Brand All Rights Reserved.</p>
+                    <div class="social">
+                        <a href="#" class="social-link">
+                            <div class="social-element social-fb"><i class="fa fa-facebook fade-in" aria-hidden="true"></i></div>
+                        </a>
+                        <a href="#" class="social-link">
+                            <div class="social-element social-tw"><i class="fa fa-twitter fade-in" aria-hidden="true"></i></div>
+                        </a>
+                        <a href="#" class="social-link">
+                            <div class="social-element social-inst social-element-notactive"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                        </a>
+                        <a href="#" class="social-link">
+                            <div class="social-element social-pint"><i class="fa fa-pinterest-p fade-in" aria-hidden="true"></i></div>
+                        </a>
+                        <a href="#" class="social-link">
+                            <div class="social-element social-g"><i class="fa fa-google-plus fade-in" aria-hidden="true"></i></div>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script src="js/vue_components/sales_comp.js"></script>
+    <script src="js/vue_components/featured_comp.js"></script>
+    <script src="js/vue_components/cart_comp.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
