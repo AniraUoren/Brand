@@ -3,7 +3,8 @@ Vue.component("cart", {
         return {
             cart: [],
             cartURL: "/cart.json",
-            isCartShowed: false
+            isCartShowed: false,
+            // totalPrice: 0
         }
     },
     template:`
@@ -16,7 +17,7 @@ Vue.component("cart", {
                     <cart-item v-for="item of cart" :key="item.id" :item="item"></cart-item>
                     <div class="drop-cart-totalprice">
                         <p class="drop-cart-t_text">TOTAL</p>
-                        <p class="drop-cart-t_price">$500.00</p>
+                        <p class="drop-cart-t_price">{{ totalPrice }}</p>
                     </div>
                     <a href="checkout.html" class="drop-cart-button">Checkout</a>
                     <a href="shopping_cart.html" class="drop-cart-button">Go to cart</a>
@@ -32,9 +33,31 @@ Vue.component("cart", {
                     this.cart.push(el);
                 }
             });
+
+    },
+    computed: {
+        totalPrice: function () {
+            console.log(this.cart.length);
+            for (let i = 0; i < this.cart.length; i++){
+                        // console.log(item.quantity);
+                        // console.log(item.price);
+                        this.totalPrice += item.quantity*+item.price;
+                    }
+                    return totalPrice
+        }
     },
     methods:{
+        // getTotalPrice(){
+        //     for (let item of this.cart){
+        //         console.log(item.quantity);
+        //         console.log(item.price);
+        //         this.totalPrice += item.quantity*+item.price;
+        //     }
+        //
+        //     return this.totalPrice
+        // },
         addItem(item) {
+            this.getTotalPrice();
             this.$parent.getJson(`${API}/getCart.json`)
                 .then(data => {
                     console.log("start")
@@ -55,7 +78,12 @@ Vue.component("cart", {
             this.$parent.getJson(`${API}/getCart.json`)
                 .then(data =>{
                     if (data.result === 1){
-                        this.cart.splice(this.cart.indexOf(item), 1);
+                        let find = this.cart.find(el => el.id === item.id);
+                        if (find.quantity > 1){
+                            find.quantity--;
+                        } else {
+                            this.cart.splice(this.cart.indexOf(item), 1);
+                        }
                     } else {
                         alert("Error delete");
                     }

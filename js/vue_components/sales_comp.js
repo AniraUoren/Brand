@@ -23,7 +23,7 @@ Vue.component("sales",{
 Vue.component("sales-item",{
    props:["item"],
     template: `
-        <a href="item.link" class="sellitem-link">
+        <a :href="item.link" class="sellitem-link">
             <div :class="item.class" >
                 <p class="sell-item-text">{{ item.title }}</p>
             </div>

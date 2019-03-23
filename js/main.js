@@ -12,9 +12,6 @@ const app = new Vue({
                 .catch(error => {
                     this.errorShow = true;
                 })
-        },
-        showMe(some){
-            console.log(some);
         }
     }
 });
