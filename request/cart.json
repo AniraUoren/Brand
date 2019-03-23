@@ -5,6 +5,9 @@
     "title": "Mango People T-shirt",
     "link": "single_page.html",
     "price": "52.00",
+    "size": "L",
+    "color": "Red",
+    "shipping": "free",
     "quantity": 1
   }
 ]
