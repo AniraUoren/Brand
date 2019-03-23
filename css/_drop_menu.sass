@@ -2,6 +2,11 @@
 
 .cart-link
   padding: 20px 0
+  background-color: transparent
+  border: none
+  outline: none
+  &:active
+    outline: none
 
 .menu-list:hover .drop-flex
   display: flex
@@ -11,6 +16,7 @@
   position: absolute
   top: 45px
   left: 0
+  z-index: 99
   border-radius: 5px
   background-color: $white
   padding: 20px 25px
@@ -60,21 +66,17 @@
   margin-top: 22px
 
 /*drop cart*/
-
-.cart-link:hover .drop-cart
-  display: flex
-
 .drop-cart
   position: absolute
   box-sizing: border-box
-  top: 45px
+  top: 75px
   left: 0
   width: 262px
   padding: 0 20px
   border: 1px solid #ededed
   border-radius: 5px
   background-color: $white
-  display: none
+
   flex-direction: column
   &:before
     content: ''
@@ -101,6 +103,8 @@
   align-self: center
 
 .drop-cart-image
+  width: 72px
+  height: 85px
   padding: 20px 0px
 
 .drop-cart-description
@@ -145,6 +149,7 @@
   box-sizing: border-box
   margin-bottom: 11px
   border: 1px solid #eaeaea
+  background-color: transparent
   text-decoration: none
   color: #4a4a4a
   font-size: 14px
@@ -152,6 +157,9 @@
   text-transform: uppercase
   line-height: 50px
   text-align: center
+  outline: none
   &:hover
     border-color: $pink
     color: $pink
+  &:active
+    outline: none

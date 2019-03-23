@@ -230,7 +230,7 @@
   flex-wrap: wrap
   justify-content: space-between
 
-
+//для отладки
 .store-item-img
   filter: brightness(40%)
 
@@ -240,8 +240,8 @@
     filter: brightness(40%)
   &:hover .store-item
     @extend %shadow
-  &:hover+.ob
-    display: flex
+  &:hover+.store-items-buttons
+    display: grid
 
 
 .store-item
@@ -272,70 +272,56 @@
 
 .store-items-container
   position: relative
-
-.ob
-  display: none
-  justify-content: center
-
-.store-item-link
-  text-decoration: none
+  display: flex
+  flex-direction: column
 
 .store-items-buttons
-  display: flex
   position: absolute
-  width: 125px
+  width: 123px
   height: 85px
   top: 98px
-  flex-wrap: wrap
+  left: 70px
+  display: none
+  grid-template: 1fr / 2fr
+  z-index: 99
 
-  outline: 1px solid yellowgreen
-
-.store-items-button-add-link
-  text-decoration: none
-
-
-.store-items-button-add
-  display: block
-  width: 123px
-  height: 39px
-  color: $white
-  font-size: 13px
-  font-weight: 700
-  text-decoration: none
-  padding: 14px
-  padding-left: 43px
-  padding-right: 0
-  border-radius: 3px
-  border: 1px solid $white
-  background: url(../img/cart_white.png) no-repeat 12px 10px
-  box-sizing: border-box
-
-
-.store-items-button-compare
-  display: block
-  font-size: 0
-  width: 57px
-  height: 38px
-  border-radius: 3px
-  border: 1px solid $white
-  background: url(../img/compare.png) no-repeat center
-  box-sizing: border-box
-  margin-top: 8px
-  margin-right: 9px
-
-
-.store-items-button-like
-  display: block
-  font-size: 0
-  width: 57px
-  height: 38px
-  border-radius: 3px
-  border: 1px solid $white
-  background: url(../img/like.png) no-repeat center
-  box-sizing: border-box
-  margin-top: 8px
-
-
+.store-items-button
+  &-add-link
+    display: flex
+    grid-column: 1 / 3
+    grid-gap: 8px
+    align-items: center
+    justify-content: center
+    width: 123px
+    height: 39px
+    box-sizing: border-box
+    border: 1px solid #ffffff
+    border-radius: 3px
+    color: #ffffff
+    text-decoration: none
+    background-color: transparent
+    &-img
+      margin-right: 5px
+  &-compare-link
+    display: flex
+    width: 57px
+    height: 38px
+    align-items: center
+    justify-content: center
+    box-sizing: border-box
+    border: 1px solid #ffffff
+    border-radius: 3px
+    background-color: transparent
+  &-like-link
+    display: flex
+    width: 57px
+    height: 38px
+    align-items: center
+    justify-content: center
+    box-sizing: border-box
+    border: 1px solid #ffffff
+    border-radius: 3px
+    background-color: transparent
 
 .pages
   display: flex
