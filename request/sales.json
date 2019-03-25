@@ -8,21 +8,21 @@
   },
   {
     "id": 2,
-    "title": "luxirous & trendy accesories",
+    "title": "luxirous & trendy <span class=\"pink help\">accesories</span>",
     "img": "img/sell_accesories.jpg",
     "link": "#",
     "class": "sell-item3"
   },
   {
     "id": 3,
-    "title": "30% offer women",
+    "title": "30% offer <span class=\"pink help\">women</span>",
     "img": "img/sell_women.jpg",
     "link": "#",
     "class": "sell-item2"
   },
   {
     "id": 4,
-    "title": "new arrivals for kids",
+    "title": "new arrivals <span class=\"pink help\">for kids</span>",
     "img": "img/sell_kids.jpg",
     "link": "#",
     "class":"sell-item4"
