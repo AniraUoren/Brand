@@ -1,7 +1,7 @@
 Vue.component("single",{
     data(){
         return{
-            items: [],
+            item: {},
             itemURL: "/item.json"
         }
     },
@@ -9,13 +9,13 @@ Vue.component("single",{
         this.$parent.getJson(`${API+this.itemURL}`)
             .then(data => {
                 for (let el of data) {
-                    this.items.push(el);
+                    this.item = Object.assign(el);
                 }
-
+                console.log(this.item)
             });
     },
     template: `
-        <div class="item-page" v-for="item of items">
+        <div class="item-page">
                 <div class="item-page-show">
                     <a href="#" class="arrow-left">
                         <div class="item-page-arrow-left"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
@@ -70,6 +70,7 @@ Vue.component("single",{
                                     <img src="img/single-item-small1.jpg" alt="ItemImg" class="alsolike-item-img">
                                     <p class="alsolike-item-description">BLAZE LEGGINGS</p>
                                     <p class="alsolike-item-price">$52.00</p>
+                                    <div class="alsolike-add-product"><a href="#" class="add" @click.prevent="$root.$refs.cart.addItem(item)">Add to Cart</a></div>
                                 </div>
                             </a>
                             <a href="#" class="alsolike-item-link">
@@ -77,6 +78,7 @@ Vue.component("single",{
                                     <img src="img/single-item-small2.jpg" alt="ItemImg" class="alsolike-item-img">
                                     <p class="alsolike-item-description">ALEXA SWEATER</p>
                                     <p class="alsolike-item-price">$52.00</p>
+                                    <div class="alsolike-add-product"><a href="#" class="add" @click.prevent="$root.$refs.cart.addItem(item)">Add to Cart</a></div>
                                 </div>
                             </a>
                             <a href="#" class="alsolike-item-link">
@@ -84,6 +86,7 @@ Vue.component("single",{
                                     <img src="img/single-item-small3.jpg" alt="ItemImg" class="alsolike-item-img">
                                     <p class="alsolike-item-description">AGNES TOP</p>
                                     <p class="alsolike-item-price">$52.00</p>
+                                    <div class="alsolike-add-product"><a href="#" class="add" @click.prevent="$root.$refs.cart.addItem(item)">Add to Cart</a></div>
                                 </div>
                             </a>
                             <a href="#" class="alsolike-item-link">
@@ -91,6 +94,7 @@ Vue.component("single",{
                                     <img src="img/single-item-small4.jpg" alt="ItemImg" class="alsolike-item-img">
                                     <p class="alsolike-item-description">SYLVA SWEATER</p>
                                     <p class="alsolike-item-price">$52.00</p>
+                                    <div class="alsolike-add-product"><a href="#" class="add" @click.prevent="$root.$refs.cart.addItem(item)">Add to Cart</a></div>
                                 </div>
                             </a>
                         </div>

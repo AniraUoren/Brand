@@ -25,7 +25,7 @@ Vue.component("sales-item",{
     template: `
         <a :href="item.link" class="sellitem-link">
             <div :class="item.class" >
-                <p class="sell-item-text">{{ item.title }}</p>
+                <p class="sell-item-text" v-html="item.title"></p>
             </div>
          </a>
     `
