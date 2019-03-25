@@ -1,12 +1,28 @@
 /*drop-menu*/
 
 .cart-link
+  position: relative
   padding: 20px 0
   background-color: transparent
   border: none
   outline: none
   &:active
     outline: none
+  &-indicator
+    position: absolute
+    top: 0
+    left: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 16px
+    height: 16px
+    border-radius: 8px
+    background-color: $pink
+    font-size: 11px
+    color: $white
+    text-decoration: none
+
 
 .menu-list:hover .drop-flex
   display: flex

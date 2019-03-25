@@ -179,8 +179,19 @@
   text-decoration: none
 
 
-.alsolike-item-link:hover .alsolike-item
+.alsolike-item-link .alsolike-item
   @extend %shadow
+.alsolike-item-link:hover .alsolike-item-img
+  filter: brightness(40%)
+.alsolike-item-link:hover .alsolike-add-product
+    display: flex
+
+.alsolike-item
+  position: relative
+
+.alsolike-item-img
+  width: 261px
+  height: 280px
 
 
 .alsolike-item-description
@@ -200,3 +211,10 @@
   margin-top: 17px
   padding-bottom: 21px
   padding-left: 13px
+
+.alsolike-add-product
+  display: none
+  position: absolute
+  width: 263px
+  top: 97px
+  justify-content: center

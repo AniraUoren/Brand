@@ -235,12 +235,14 @@
 //  filter: brightness(40%)
 
 .store-item-link
+  display: block
+  position: relative
   text-decoration: none
   &:hover .store-item-img
     filter: brightness(40%)
   &:hover .store-item
     @extend %shadow
-  &:hover+.store-items-buttons
+  &:hover .store-items-buttons
     display: grid
 
 
@@ -271,7 +273,6 @@
 /*buttons hover*/
 
 .store-items-container
-  position: relative
   display: flex
   flex-direction: column
 
@@ -300,6 +301,9 @@
     color: #ffffff
     text-decoration: none
     background-color: transparent
+    outline: none
+    &:hover
+      cursor: pointer
     &-img
       margin-right: 5px
   &-compare-link
@@ -312,6 +316,9 @@
     border: 1px solid #ffffff
     border-radius: 3px
     background-color: transparent
+    outline: none
+    &:hover
+      cursor: pointer
   &-like-link
     display: flex
     width: 57px
@@ -322,6 +329,9 @@
     border: 1px solid #ffffff
     border-radius: 3px
     background-color: transparent
+    outline: none
+    &:hover
+      cursor: pointer
 
 .pages
   display: flex
