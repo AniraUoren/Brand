@@ -138,15 +138,17 @@ Vue.component("cart-page", {
                         <div class="cart-headcol-p" v-if="cart.length===0">Корзина пуста</div>
                     </div>
     `,
-    methods:{
+    methods: {
         applyCoupon(couponNumber){
             if (couponNumber === "test"){
-               this.couponNumber = couponNumber;
-               console.log(this.couponNumber)
+                this.couponNumber = couponNumber;
+                console.log(this.couponNumber)
             } else {
                 alert("wrong")
             }
         },
+    },
+    computed: {
 
     }
 });
@@ -158,8 +160,8 @@ Vue.component("cart-page-item", {
                 <img :src="item.img" :alt="item.title" class="cart-itemcol-img">
                 <div class="cart-itemcol-description">
                     <a :href="item.link" class="cart-itemcol-link"><p class="cart-itemcol-p cart-itemcol-p-self">{{ item.title }}</p></a>
-                    <p class="cart-itemcol-p">Color:<span class="cart-itemcol-span">{{ item.color }}</span></p>
-                    <p class="cart-itemcol-p">Size:<span class="cart-itemcol-span">{{ item.size }}</span></p>
+                    <p class="cart-itemcol-p">Color: <span class="cart-itemcol-span">{{ item.color }}</span></p>
+                    <p class="cart-itemcol-p">Size: <span class="cart-itemcol-span">{{ item.size }}</span></p>
                 </div>
             </div>
             <div class="cart-itemcol"><p class="cart-itemcol-p-other">{{ item.price }}</p></div>
@@ -170,5 +172,37 @@ Vue.component("cart-page-item", {
             <div class="cart-itemcol"><a href="#" class="cart-itemcol-delete-link" @click.prevent="$parent.$parent.$refs.cart.removeItem(item)"><i class="fa fa-plus-circle cart-itemcol-delete" aria-hidden="true"></i></a></div>
         </div>
     `,
+});
+
+Vue.component("total-price", {
+    props: ["cart"],
+    template: `
+        <table class="cart-form-price">
+            <tr class="cart-form-price-row">
+                <td class="cart-form-price-sub">Sub total</td>
+                <td class="cart-form-price-sub">{{ subTotal }}</td>
+            </tr>
+            <tr class="cart-form-price-row">
+                <td class="cart-form-price-grand">GRAND TOTAL</td>
+                <!--<td class="cart-form-price-grand price-color">{{ grandTotal }}</td>-->
+            </tr>
+        </table>
+    `,
+    mounted(){
+        this.test();
+    },
+    computed: {
+        subTotal: function () {
+            let subTotal= 0;
+            // for (item of cart){
+            //     subTotal += item.price * item.quantity;
+            // }
+        },
+    },
+    methods:{
+        test(){
+            console.log($parent.$refs.cart.cart);
+        }
+    }
 });
 

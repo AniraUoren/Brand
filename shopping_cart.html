@@ -131,25 +131,19 @@
                         </form>
                         <a class="cart-form-buttonform" href="#">get a quote</a>
                     </div>
-                    <div class="cart-form">
-                        <h3 class="cart-form-h">coupon discount</h3>
-                        <p class="cart-form-p">Enter your coupon code if you have one</p>
-                        <form class="cart-form-flex" action="#">
-                            <input class="cart-form-textform" type="text" placeholder="State">
-                        </form>
-                        <a class="cart-form-buttonform" href="#">Apply coupon</a>
-                    </div>
+                    <coupon ref="coupon"></coupon>
                     <div class="cart-form total-price">
-                        <table class="cart-form-price">
-                            <tr class="cart-form-price-row">
-                                <td class="cart-form-price-sub">Sub total</td>
-                                <td class="cart-form-price-sub">$900</td>
-                            </tr>
-                            <tr class="cart-form-price-row">
-                                <td class="cart-form-price-grand">GRAND TOTAL</td>
-                                <td class="cart-form-price-grand price-color">$900</td>
-                            </tr>
-                        </table>
+                        <total-price ref="total-price"></total-price>
+                        <!--<table class="cart-form-price">-->
+                            <!--<tr class="cart-form-price-row">-->
+                                <!--<td class="cart-form-price-sub">Sub total</td>-->
+                                <!--<td class="cart-form-price-sub">999</td>-->
+                            <!--</tr>-->
+                            <!--<tr class="cart-form-price-row">-->
+                                <!--<td class="cart-form-price-grand">GRAND TOTAL</td>-->
+                                <!--<td class="cart-form-price-grand price-color">$900</td>-->
+                            <!--</tr>-->
+                        <!--</table>-->
                         <a href="#" class="checkout">proceed to checkout</a>
                     </div>
                 </div>
@@ -257,6 +251,7 @@
     <script src="js/vue_components/sales_comp.js"></script>
     <script src="js/vue_components/featured_comp.js"></script>
     <script src="js/vue_components/cart_comp.js"></script>
+    <script src="js/vue_components/couponincart_comp.js"></script>
     <script src="js/main.js"></script>
 </body>
 
