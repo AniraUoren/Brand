@@ -108,7 +108,7 @@ Vue.component("cart-item", {
    `,
 });
 
-Vue.component("cart-page", {
+Vue.component("cartpage", {
     data() {
         return {
             cart:[],
@@ -134,11 +134,26 @@ Vue.component("cart-page", {
                             <div class="cart-headcol"><p class="cart-headcol-p">Subtotal</p></div>
                             <div class="cart-headcol"><p class="cart-headcol-p">ACTION</p></div>
                         </div>
-                        <cart-page-item v-for="item of $parent.$refs.cart.cart" :key="item.id" :item="item"></cart-page-item>
+                        <cart-page-item v-for="item of cart" :key="item.id" :item="item"></cart-page-item>
                         <div class="cart-headcol-p" v-if="cart.length===0">Корзина пуста</div>
                     </div>
     `,
     methods:{
+        removeItem(item){
+            this.$parent.getJson(`${API}/getCart.json`)
+                .then(data =>{
+                    if (data.result === 1){
+                        let find = this.cart.find(el => el.id === item.id);
+                        if (find.quantity > 1){
+                            find.quantity--;
+                        } else {
+                            this.cart.splice(this.cart.indexOf(item), 1);
+                        }
+                    } else {
+                        alert("Error delete");
+                    }
+                });
+        },
         applyCoupon(couponNumber){
             if (couponNumber === "test"){
                this.couponNumber = couponNumber;
@@ -167,7 +182,7 @@ Vue.component("cart-page-item", {
                 <form action=""><input type="number" name="quantity" class="cart-itemcol-size" min="0" v-model="item.quantity"></form></div>
             <div class="cart-itemcol"><p class="cart-itemcol-p-other">{{ item.shipping }}</p></div>
             <div class="cart-itemcol"><p class="cart-itemcol-p-other" v-text="(item.price*item.quantity).toFixed(2)"></p></div>
-            <div class="cart-itemcol"><a href="#" class="cart-itemcol-delete-link" @click.prevent="$parent.$parent.$refs.cart.removeItem(item)"><i class="fa fa-plus-circle cart-itemcol-delete" aria-hidden="true"></i></a></div>
+            <div class="cart-itemcol"><a href="#" class="cart-itemcol-delete-link" @click.prevent="$root.$refs.cartpage.removeItem(item).toFixed(2)"><i class="fa fa-plus-circle cart-itemcol-delete" aria-hidden="true"></i></a></div>
         </div>
     `,
 });
