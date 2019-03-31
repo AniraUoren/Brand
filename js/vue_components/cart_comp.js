@@ -3,7 +3,7 @@ Vue.component("cart", {
         return {
             cart: [],
             cartURL: "/cart.json",
-            isCartShowed: false,
+            isCartShowed: false
         }
     },
     template:`
@@ -35,13 +35,12 @@ Vue.component("cart", {
                     this.cart.push(el);
                 }
             });
-
     },
     computed: {
         totalPrice: function () {
             let totalPrice = 0;
             for (let item of this.cart){
-                totalPrice += item.quantity*+item.price;
+                totalPrice += item.quantity * +item.price;
             }
             return totalPrice.toFixed(2)
         },
@@ -51,6 +50,22 @@ Vue.component("cart", {
                 totalQuantity += item.quantity;
             }
             return totalQuantity
+        },
+        grandTotalPrice: function () {
+            let grandTotalPrice = 0;
+            let couponNumber = "test";
+
+            if (couponNumber === "test"){
+                for (let item of this.cart){
+                    grandTotalPrice += item.quantity * +item.price - (item.quantity * +item.price) * 0.1;
+                }
+            } else
+                {
+                for (let item of this.cart){
+                    grandTotalPrice += item.quantity * +item.price;
+                }
+            }
+            return grandTotalPrice.toFixed(2)
         }
     },
     methods:{
@@ -84,8 +99,7 @@ Vue.component("cart", {
                         alert("Error delete");
                     }
                 });
-        }
-
+        },
     }
 });
 
@@ -175,34 +189,17 @@ Vue.component("cart-page-item", {
 });
 
 Vue.component("total-price", {
-    props: ["cart"],
     template: `
         <table class="cart-form-price">
             <tr class="cart-form-price-row">
                 <td class="cart-form-price-sub">Sub total</td>
-                <td class="cart-form-price-sub">{{ subTotal }}</td>
+                <td class="cart-form-price-sub">{{ $parent.$refs.cart.totalPrice }}</td>
             </tr>
             <tr class="cart-form-price-row">
                 <td class="cart-form-price-grand">GRAND TOTAL</td>
-                <!--<td class="cart-form-price-grand price-color">{{ grandTotal }}</td>-->
+                <td class="cart-form-price-grand price-color">{{ $parent.$refs.cart.grandTotalPrice }}</td>
             </tr>
         </table>
     `,
-    mounted(){
-        this.test();
-    },
-    computed: {
-        subTotal: function () {
-            let subTotal= 0;
-            // for (item of cart){
-            //     subTotal += item.price * item.quantity;
-            // }
-        },
-    },
-    methods:{
-        test(){
-            console.log($parent.$refs.cart.cart);
-        }
-    }
 });
 
