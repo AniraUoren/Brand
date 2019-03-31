@@ -115,5 +115,57 @@
     "color": ["Red", "White", "Blue"],
     "size": ["S", "M", "XL", "XLL"],
     "shipping": "free"
+  },
+  {
+    "id": 10,
+    "img": "img/single-item-small1.jpg",
+    "title": "BLAZE LEGGINGS",
+    "description": "Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals.",
+    "link": "single_page.html",
+    "price": "52.00",
+    "material": "cotton",
+    "designer": "BINBURHAN",
+    "color": ["Red", "White", "Blue"],
+    "size": ["S", "M", "XL", "XLL"],
+    "shipping": "free"
+  },
+  {
+    "id": 11,
+    "img": "img/single-item-small2.jpg",
+    "title": "ALEXA SWEATER",
+    "description": "Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals.",
+    "link": "single_page.html",
+    "price": "52.00",
+    "material": "cotton",
+    "designer": "BINBURHAN",
+    "color": ["Red", "White", "Blue"],
+    "size": ["S", "M", "XL", "XLL"],
+    "shipping": "free"
+  },
+  {
+    "id": 12,
+    "img": "img/single-item-small3.jpg",
+    "title": "AGNES TOP",
+    "description": "Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals.",
+    "link": "single_page.html",
+    "price": "52.00",
+    "material": "cotton",
+    "designer": "BINBURHAN",
+    "color": ["Red", "White", "Blue"],
+    "size": ["S", "M", "XL", "XLL"],
+    "shipping": "free"
+  },
+  {
+    "id": 13,
+    "img": "img/single-item-small4.jpg",
+    "title": "SYLVA SWEATER",
+    "description": "Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals.",
+    "link": "single_page.html",
+    "price": "52.00",
+    "material": "cotton",
+    "designer": "BINBURHAN",
+    "color": ["Red", "White", "Blue"],
+    "size": ["S", "M", "XL", "XLL"],
+    "shipping": "free"
   }
 ]
