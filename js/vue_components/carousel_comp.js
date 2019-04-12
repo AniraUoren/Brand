@@ -10,16 +10,23 @@ Vue.component("carousel", {
     template: `
         <div class="carousel">
             <transition-group tag="div" :name="direction > 0 ? 'slide' : 'slide-invert'" class="carousel-slide">
-                <carousel-item v-for="item of feedback" :key="item.id" :item="item"></carousel-item>
+                <carousel-item v-for="(src, index) of feedback" :key="src.id" v-show="index === active" :item="src"></carousel-item>
             </transition-group>
-            <ul class="carousel-buttons">
-            <li v-for="(src,index) in feedback" :class="{active:index === active}" @click="change(index)"></li>
-                <!--<li class="carousel-button">1</li>-->
-                <!--<li class="carousel-button carousel-button__active">2</li>-->
-                <!--<li class="carousel-button">3</li>-->
+            <ul class="carousel-buttons_ul">
+                <li v-for="(src,index) in feedback" class="carousel-buttons_li" @click="change(index)">
+                    <button class="carousel_button" :class="{buttonctive:index === active}">{{ index }}</button>
+                </li>
             </ul>
         </div>
     `,
+    mounted(){
+        this.$parent.getJson(`${API+this.feedbackURL}`)
+            .then(data => {
+                for (let el of data) {
+                    this.feedback.push(el);
+                }
+            });
+    },
     computed: {
         total() {
             return this.feedback.length

@@ -2,7 +2,9 @@ Vue.component("single",{
     data(){
         return{
             item: {},
-            itemURL: "/item.json"
+            itemURL: "/item.json",
+            catalog: [],
+            catalogURL: "/catalog.json"
         }
     },
     mounted(){
@@ -11,7 +13,12 @@ Vue.component("single",{
                 for (let el of data) {
                     this.item = Object.assign(el);
                 }
-                console.log(this.item)
+            });
+        this.$parent.getJson(`${API+this.catalogURL}`)
+            .then(data => {
+                for (let el of data) {
+                    this.catalog.push(el);
+                }
             });
     },
     template: `
@@ -65,38 +72,38 @@ Vue.component("single",{
                     <div class="container alsolike-flex">
                         <h3 class="alsolike-h">you may like also</h3>
                         <div class="alsolike-items">
-                            <a href="#" class="alsolike-item-link">
-                                <div class="alsolike-item">
-                                    <img src="img/single-item-small1.jpg" alt="ItemImg" class="alsolike-item-img">
-                                    <p class="alsolike-item-description">BLAZE LEGGINGS</p>
-                                    <p class="alsolike-item-price">$52.00</p>
-                                    <div class="alsolike-add-product"><a href="#" class="add" @click.prevent="$root.$refs.cart.addItem(item)">Add to Cart</a></div>
-                                </div>
-                            </a>
-                            <a href="#" class="alsolike-item-link">
-                                <div class="alsolike-item">
-                                    <img src="img/single-item-small2.jpg" alt="ItemImg" class="alsolike-item-img">
-                                    <p class="alsolike-item-description">ALEXA SWEATER</p>
-                                    <p class="alsolike-item-price">$52.00</p>
-                                    <div class="alsolike-add-product"><a href="#" class="add" @click.prevent="$root.$refs.cart.addItem(item)">Add to Cart</a></div>
-                                </div>
-                            </a>
-                            <a href="#" class="alsolike-item-link">
-                                <div class="alsolike-item">
-                                    <img src="img/single-item-small3.jpg" alt="ItemImg" class="alsolike-item-img">
-                                    <p class="alsolike-item-description">AGNES TOP</p>
-                                    <p class="alsolike-item-price">$52.00</p>
-                                    <div class="alsolike-add-product"><a href="#" class="add" @click.prevent="$root.$refs.cart.addItem(item)">Add to Cart</a></div>
-                                </div>
-                            </a>
-                            <a href="#" class="alsolike-item-link">
-                                <div class="alsolike-item">
-                                    <img src="img/single-item-small4.jpg" alt="ItemImg" class="alsolike-item-img">
-                                    <p class="alsolike-item-description">SYLVA SWEATER</p>
-                                    <p class="alsolike-item-price">$52.00</p>
-                                    <div class="alsolike-add-product"><a href="#" class="add" @click.prevent="$root.$refs.cart.addItem(item)">Add to Cart</a></div>
-                                </div>
-                            </a>
+<!--                            <a href="#" class="alsolike-item-link">-->
+<!--                                <div class="alsolike-item">-->
+<!--                                    <img :src="catalog[10].img" alt="ItemImg" class="alsolike-item-img">-->
+<!--                                    <p class="alsolike-item-description">{{ catalog[10].title }}</p>-->
+<!--                                    <p class="alsolike-item-price">{{ catalog[10].price }}</p>-->
+<!--                                    <div class="alsolike-add-product"><a href="#" class="add" @click.prevent="$root.$refs.cart.addItem(item)">Add to Cart</a></div>-->
+<!--                                </div>-->
+<!--                            </a>-->
+<!--                            <a href="#" class="alsolike-item-link">-->
+<!--                                <div class="alsolike-item">-->
+<!--                                    <img :src="catalog[11].img" alt="ItemImg" class="alsolike-item-img">-->
+<!--                                    <p class="alsolike-item-description">{{ catalog[11].title }}</p>-->
+<!--                                    <p class="alsolike-item-price">{{ catalog[11].price }}</p>-->
+<!--                                    <div class="alsolike-add-product"><a href="#" class="add" @click.prevent="$root.$refs.cart.addItem(item)">Add to Cart</a></div>-->
+<!--                                </div>-->
+<!--                            </a>-->
+<!--                            <a href="#" class="alsolike-item-link">-->
+<!--                                <div class="alsolike-item">-->
+<!--                                    <img :src="catalog[12].img" alt="ItemImg" class="alsolike-item-img">-->
+<!--                                    <p class="alsolike-item-description">{{ catalog[12].title }}</p>-->
+<!--                                    <p class="alsolike-item-price">{{ catalog[12].price }}</p>-->
+<!--                                    <div class="alsolike-add-product"><a href="#" class="add" @click.prevent="$root.$refs.cart.addItem(item)">Add to Cart</a></div>-->
+<!--                                </div>-->
+<!--                            </a>-->
+<!--                            <a href="#" class="alsolike-item-link">-->
+<!--                                <div class="alsolike-item">-->
+<!--                                    <img :src="catalog[13].img" alt="ItemImg" class="alsolike-item-img">-->
+<!--                                    <p class="alsolike-item-description">{{ catalog[13].title }}</p>-->
+<!--                                    <p class="alsolike-item-price">{{ catalog[13].price }}</p>-->
+<!--                                    <div class="alsolike-add-product"><a href="#" class="add" @click.prevent="$root.$refs.cart.addItem(item)">Add to Cart</a></div>-->
+<!--                                </div>-->
+<!--                            </a>-->
                         </div>
                     </div>
                 </article>

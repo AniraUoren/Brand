@@ -506,29 +506,52 @@ body {
       margin-top: 19px; }
 
 /*for vue */
-.slide-fade-enter-active {
-  transition: all 0.3s ease; }
-.slide-fade-leave-active {
-  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1); }
-.slide-fade-enter, .slide-fade-leave-to {
-  transform: translateX(10px);
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s; }
+
+.fade-enter,
+.fade-leave-to {
   opacity: 0; }
 
-.carousel-buttons {
+.slide-enter-active,
+.slide-leave-active,
+.slide-invert-enter-active,
+.slide-invert-leave-active {
+  transition: left 0.5s; }
+
+.slide-enter {
+  left: 100% !important; }
+
+.slide-leave-to {
+  left: -100% !important; }
+
+.slide-invert-enter {
+  left: -100% !important; }
+
+.slide-invert-leave-to {
+  left: 100% !important; }
+
+.carousel-buttons_ul {
   display: flex;
   margin-top: 41px; }
 
-.carousel-button {
+.carousel-buttons_li {
   list-style: none;
-  font-size: 0;
+  margin-right: 13px; }
+  .carousel-buttons_li:last-child {
+    margin-right: 0; }
+
+.carousel_button {
   width: 38px;
   height: 4px;
   background-color: #d6d6d6;
-  margin-right: 13px; }
-  .carousel-button:last-child {
-    margin-right: 0; }
-  .carousel-button__active {
-    background-color: #f16d7f; }
+  font-size: 0;
+  border: none;
+  outline: none; }
+
+.buttonctive {
+  background-color: #f16d7f; }
 
 .subscribe {
   text-transform: uppercase;
